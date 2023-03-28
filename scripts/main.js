@@ -49,7 +49,7 @@ function killMonster(){
     //monster disapears
     firstMonster.style.display = "none"
     //test
-    document.getElementById('testDiv').textContent = deadMonsters.length
+    document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
 }
 
 document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
