@@ -50,8 +50,48 @@ class Monster {
     }
 }
 
+class Monster2 {
+    constructor(xpoint, ypoint, radius, color){
+        this.xpoint = xpoint;
+        this.ypoint = ypoint;
+        this.radius = radius;
+        this.color = color;
+        this.width = 100;
+        this.height = 100;
+        this.image = document.getElementById('enemyImage');
+    }
+    draw(context){
+
+        context.beginPath()
+        context.arc(this.xpoint + this.width/2, this.ypoint + this.height/2 , this.radius, 0, Math.PI * 2, false);
+        context.fillStyle = this.color;
+        context.fill()
+        context.stroke();
+        context.closePath()
+        context.drawImage(this.image, this.xpoint, this.ypoint, this.width, this.height)
+    }
+
+    update(){
+        this.xpoint+=4;
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - (this.xpoint + this.width/2)) * (ymouse - (this.xpoint + this.width/2)))
+            +
+            (( ymouse - (this.ypoint + this.height/2) ) * (ymouse - (this.ypoint + this.height/2)))
+        );
+        if (distance < this.radius) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
 const enemytest = new Monster (100, 0, 50, 'red')
-const enemytest2 = new Monster (100, 0, 50, 'red')
+const enemytest2 = new Monster2 (100, 100, 50, 'red')
 // enemytest.draw(getContext2d)
 //test========
 canvasRowOne.addEventListener('click', (event) => {
@@ -69,8 +109,8 @@ function animate(){
 }
 
 function animate2(){
-    getContext2d2.clearRect(0, 0, canvasRowTwo.width, canvasRowTwo.height)
-    enemytest2.draw(getContext2d2)
+    getContext2d2.clearRect(0, 0, canvasRowOne.width, canvasRowOne.height)
+    enemytest2.draw(getContext2d1)
     enemytest2.update()
     requestAnimationFrame(animate2)
 }
