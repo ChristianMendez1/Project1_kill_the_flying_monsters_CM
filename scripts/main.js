@@ -1,67 +1,81 @@
-//animation test
-
-
 const firstMonster = document.getElementById("myCanvas")
-//get access to canvas properties
 const getContext2d = firstMonster.getContext('2d')
 
-// test animation
-fillRectFunc()
-
-var rectX = 0;
-var rectY = 0;
-var velocityX = 0;
-var velocityY = 0;
-
-
-function fillRectFunc(){
-    getContext2d.clearRect(0, 0, firstMonster.width, firstMonster.height)
-    getContext2d.fillRect(rectX, rectY, 50, 50)
-    requestAnimationFrame(fillRectFunc)
-    rectX += velocityX;
-    rectY += velocityY;
-}
-
-//js test
-// document.getElementById('myCanvas').textContent = 'Hello'
-
-//rect test
-// getContextConst.fillRect(0, 0, 50, 50)
-// requestAnimationFrame(fillRectTest)
-
-startButton.addEventListener("click", monsterMovement)
-function monsterMovement(){
-    velocityX = 5
-    velocityY = 5
-
-}
-
-//kill monster when click
-firstMonster.addEventListener('click', killMonster)
 
 //where dead monsters go for score
 var deadMonsters = []
 
 //pushes monsters to dead monsters
+document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
+
+// monster class
+class Monster {
+    constructor(xpoint, ypoint, radius, color){
+        this.xpoint = xpoint;
+        this.ypoint = ypoint;
+        this.radius = radius;
+        this.color = color;
+        this.image = document.getElementById('enemyImage');
+    }
+    draw(context){
+        context.beginPath()
+        context.arc(this.xpoint, this.ypoint, this.radius, 0, Math.PI * 2, false);
+        context.fillStyle = this.color;
+        context.fill()
+        context.stroke();
+        // context.drawImage(this.image, this.xpoint, this.ypoint, 200, 200)
+        context.closePath()
+    }
+
+    update(){
+        this.xpoint++;
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.xpoint ) * (ymouse - this.xpoint))
+            +
+            (( ymouse - this.ypoint ) * (ymouse - this.ypoint))
+        );
+        if (distance < this.radius) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
+const enemytest = new Monster (200, 200, 100, 'red')
+// enemytest.draw(getContext2d)
+//test========
+firstMonster.addEventListener('click', (event) => {
+    const rect = firstMonster.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    console.log(enemytest.clickEnemy(x, y))
+})
+
+function animate(){
+    getContext2d.clearRect(0, 0, firstMonster.width, firstMonster.height)
+    enemytest.draw(getContext2d)
+    enemytest.update()
+    requestAnimationFrame(animate)
+    // enemytest.image.addEventListener('click', killMonster)
+}
+
+animate()
+
+// document.getElementById('enemyImage').addEventListener('click', killMonster)
+
 function killMonster(){
-    //score dead monster
     deadMonsters.push('dead')
-    //monster disapears
-    firstMonster.style.display = "none"
-    //test
+    // flyingEnemy.drawImage.style.display = "none"
     document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
 }
 
-document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
-
-//score
-// document.getElementById('testDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
+// const clickable = document.getElementById('enemyImage')
 
 
-// document.getElementById('testDiv').textContent = deadMonsters
+// startButton.addEventListener("click", animate)
 
-
-// movement stuff just in case
-// addEventListener("keydown", function(click){
-//     console.log(click.code)
-// })
