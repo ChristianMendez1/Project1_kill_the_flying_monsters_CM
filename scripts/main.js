@@ -15,28 +15,31 @@ class Monster {
         this.ypoint = ypoint;
         this.radius = radius;
         this.color = color;
+        this.width = 200;
+        this.height = 200;
         this.image = document.getElementById('enemyImage');
     }
     draw(context){
+
         context.beginPath()
-        context.arc(this.xpoint, this.ypoint, this.radius, 0, Math.PI * 2, false);
+        context.arc(this.xpoint + this.width/2, this.ypoint + this.height/2 , this.radius, 0, Math.PI * 2, false);
         context.fillStyle = this.color;
         context.fill()
         context.stroke();
-        // context.drawImage(this.image, this.xpoint, this.ypoint, 200, 200)
         context.closePath()
+        context.drawImage(this.image, this.xpoint, this.ypoint, 200, 200)
     }
 
     update(){
-        this.xpoint++;
+        this.xpoint+=1;
     }
     
     clickEnemy(xmouse, ymouse) {
         const distance =
         Math.sqrt(
-            (( xmouse - this.xpoint ) * (ymouse - this.xpoint))
+            (( xmouse - (this.xpoint + this.width/2)) * (ymouse - (this.xpoint + this.width/2)))
             +
-            (( ymouse - this.ypoint ) * (ymouse - this.ypoint))
+            (( ymouse - (this.ypoint + this.height/2) ) * (ymouse - (this.ypoint + this.height/2)))
         );
         if (distance < this.radius) {
             return true;
@@ -61,7 +64,7 @@ function animate(){
     enemytest.draw(getContext2d)
     enemytest.update()
     requestAnimationFrame(animate)
-    // enemytest.image.addEventListener('click', killMonster)
+    enemytest.image.addEventListener('click', killMonster)
 }
 
 animate()
