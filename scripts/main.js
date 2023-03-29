@@ -1,6 +1,7 @@
-const firstMonster = document.getElementById("myCanvas")
-const getContext2d = firstMonster.getContext('2d')
-
+const canvasRowOne = document.getElementById("canvasRowOne")
+const canvasRowTwo = document.getElementById("canvasRowTwo")
+const getContext2d1 = canvasRowOne.getContext('2d')
+const getContext2d2 = canvasRowTwo.getContext('2d')
 
 //where dead monsters go for score
 var deadMonsters = []
@@ -15,8 +16,8 @@ class Monster {
         this.ypoint = ypoint;
         this.radius = radius;
         this.color = color;
-        this.width = 200;
-        this.height = 200;
+        this.width = 100;
+        this.height = 100;
         this.image = document.getElementById('enemyImage');
     }
     draw(context){
@@ -27,11 +28,11 @@ class Monster {
         context.fill()
         context.stroke();
         context.closePath()
-        context.drawImage(this.image, this.xpoint, this.ypoint, 200, 200)
+        context.drawImage(this.image, this.xpoint, this.ypoint, this.width, this.height)
     }
 
     update(){
-        this.xpoint+=1;
+        this.xpoint+=4;
     }
     
     clickEnemy(xmouse, ymouse) {
@@ -49,26 +50,42 @@ class Monster {
     }
 }
 
-const enemytest = new Monster (200, 200, 100, 'red')
+const enemytest = new Monster (100, 0, 50, 'red')
+const enemytest2 = new Monster (100, 0, 50, 'red')
 // enemytest.draw(getContext2d)
 //test========
-firstMonster.addEventListener('click', (event) => {
-    const rect = firstMonster.getBoundingClientRect();
+canvasRowOne.addEventListener('click', (event) => {
+    const rect = canvasRowOne.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     console.log(enemytest.clickEnemy(x, y))
 })
 
 function animate(){
-    getContext2d.clearRect(0, 0, firstMonster.width, firstMonster.height)
-    enemytest.draw(getContext2d)
+    getContext2d1.clearRect(0, 0, canvasRowOne.width, canvasRowOne.height)
+    enemytest.draw(getContext2d1)
     enemytest.update()
     requestAnimationFrame(animate)
-    enemytest.image.addEventListener('click', killMonster)
+}
+
+function animate2(){
+    getContext2d2.clearRect(0, 0, canvasRowTwo.width, canvasRowTwo.height)
+    enemytest2.draw(getContext2d2)
+    enemytest2.update()
+    requestAnimationFrame(animate2)
 }
 
 animate()
+animate2()
 
+// function animate(){
+//     getContext2d.clearRect(0, 0, canvasRowOne.width, canvasRowOne.height)
+//     enemytwo.draw(getContext2d)
+//     enemytwo.update()
+//     requestAnimationFrame(animate)
+//     enemytwo.image.addEventListener('click', killMonster)
+// }
+// animate()
 // document.getElementById('enemyImage').addEventListener('click', killMonster)
 
 function killMonster(){
