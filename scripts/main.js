@@ -1,3 +1,4 @@
+//setup
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
@@ -8,6 +9,7 @@ canvas.width = window_width
 canvas.height = window_height
 
 console.log(canvas)
+//setupend
 
 //where dead monsters go for score
 var deadMonsters = []
@@ -100,7 +102,6 @@ class Monster2 {
     }
 }
 
-// const enemytest = new Monster (60, 60, 50, 'red')
 const enemytest2 = new Monster2 (0, 100, 50, 'red')
 // enemytest.draw(getContext2d)
 //test========
@@ -109,6 +110,9 @@ canvas.addEventListener('click', (event) => {
     const y = event.clientY 
     // console.log(event)
     console.log(enemytest.clickEnemy(x, y))
+    if (enemytest.clickEnemy(x, y) === true){
+        enemies.splice(0, 1)
+    }
 })
 
 
@@ -124,6 +128,7 @@ function animate(){
     enemies.forEach(Monster => {
     enemytest.draw(c)
     enemytest.update()
+    
     })
 }
 animate()
