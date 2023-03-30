@@ -1,6 +1,6 @@
 //setup
 const canvas = document.querySelector('canvas')
-const c = canvas.getContext('2d')
+const ctx = canvas.getContext('2d')
 
 var window_width = window.innerWidth;
 var window_height = window.innerHeight;
@@ -47,6 +47,7 @@ class Monster1 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy1), 1)
             return true;
         } else {
@@ -90,6 +91,7 @@ class Monster2 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy2), 1)
             return true;
         } else {
@@ -133,6 +135,7 @@ class Monster3 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy3), 1)
             return true;
         } else {
@@ -176,6 +179,7 @@ class Monster4 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy4), 1)
             return true;
         } else {
@@ -219,6 +223,7 @@ class Monster5 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy5), 1)
             return true;
         } else {
@@ -262,6 +267,7 @@ class Monster6 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
+            score.push('score')
             enemies.splice(enemies.indexOf(enemy6), 1)
             return true;
         } else {
@@ -442,7 +448,7 @@ class Monster10 {
     }
 }
 
-class Monster {
+class Monster11 {
     constructor(x, y, radius, color, velocity){
         this.x = x;
         this.y = y;
@@ -486,26 +492,32 @@ class Monster {
 }
 
 const enemy1 = new Monster1 (0, 60, 40, 'red', { x: 1, y: 0 })
-const enemy2 = new Monster2 (0, 120, 40, 'red', { x: 1, y: 0 })
-const enemy3 = new Monster3 (0, 120, 40, 'red', { x: 1, y: 0 })
-const enemy4 = new Monster4 (0, 240, 40, 'red', { x: 1, y: 0 })
-const enemy5 = new Monster5 (0, 360, 40, 'red', { x: 1, y: 0 })
+const enemy2 = new Monster2 (0, 120, 40, 'red', { x: 5, y: 0 })
+const enemy3 = new Monster3 (0, 180, 40, 'red', { x: 4, y: 0 })
+const enemy4 = new Monster4 (0, 240, 40, 'red', { x: 7, y: 0 })
+const enemy5 = new Monster5 (0, 360, 40, 'red', { x: 4, y: 0 })
 const enemy6 = new Monster6 (0, 420, 40, 'red', { x: 1, y: 0 })
-const enemy7 = new Monster7 (60, 60, 40, 'red', { x: 1, y: 0 })
+const enemy7 = new Monster7 (60, 60, 40, 'red', { x: 2, y: 0 })
 const enemy8 = new Monster8 (60, 60, 40, 'red', { x: 1, y: 0 })
 const enemy9 = new Monster9 (60, 60, 40, 'red', { x: 1, y: 0 })
 const enemy10 = new Monster10 (60, 60, 40, 'red', { x: 1, y: 0 })
 
 const enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6]
+const score = []
 
 function animate(){
-    c.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
     requestAnimationFrame(animate)
 
     enemies.forEach((Monster) => {
-        Monster.draw(c)
+        Monster.draw(ctx)
         Monster.update()
+    
 })
+
+ctx.font = "30px Arial";
+ctx.strokeText("Score: " + score.length, 100, 500)
+
 }
 
 canvas.addEventListener('click', (event) => {
@@ -517,6 +529,8 @@ canvas.addEventListener('click', (event) => {
     console.log(enemy4.clickEnemy(x, y))
     console.log(enemy5.clickEnemy(x, y))
     console.log(enemy6.clickEnemy(x, y))
+    document.getElementById('scoreDiv').textContent = "Score: " + score.length;
+    ctx.strokeText("Score: " + score.length, 100, 500)
 })
 
 
@@ -533,7 +547,7 @@ animate()
 //     console.log(enemytest2.clickEnemy(x, y))
 // })
 
-// document.getElementById('enemyImage').addEventListener('click', killMonster)
+// document.getElementById('scoreDiv').addEventListener('click', killMonster)
 
 // function killMonster(){
 //     deadMonsters.push('dead')

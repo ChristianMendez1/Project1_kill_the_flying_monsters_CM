@@ -5,3 +5,7 @@ body {
 img {
     margin: 0;
 }
+
+#enemyImage {
+    display: none;
+}
