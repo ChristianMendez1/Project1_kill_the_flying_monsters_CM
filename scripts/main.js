@@ -7,6 +7,7 @@ var window_height = window.innerHeight;
 canvas.width = window_width
 canvas.height = window_height
 
+console.log(canvas)
 
 //where dead monsters go for score
 var deadMonsters = []
@@ -33,11 +34,11 @@ class Monster {
         c.fill()
         c.stroke();
         c.closePath()
-        // context.drawImage(this.image, this.xpoint, this.ypoint, this.width, this.height)
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
 
     update(){
-        this.xpoint++;
+        this.x++;
     }
     
     clickEnemy(xmouse, ymouse) {
@@ -114,8 +115,8 @@ canvas.addEventListener('click', (event) => {
 function animate(){
     c.clearRect(0, 0, canvas.width, canvas.height)
     enemytest.draw(c)
-    // enemytest.update()
-    // requestAnimationFrame(animate)
+    enemytest.update()
+    requestAnimationFrame(animate)
 }
 
 function animate2(){
