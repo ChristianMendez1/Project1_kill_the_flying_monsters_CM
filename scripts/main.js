@@ -27,7 +27,6 @@ class Monster {
         this.image = document.getElementById('enemyImage');
     }
     draw(c){
-
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
@@ -101,7 +100,7 @@ class Monster2 {
     }
 }
 
-const enemytest = new Monster (60, 60, 50, 'red')
+// const enemytest = new Monster (60, 60, 50, 'red')
 const enemytest2 = new Monster2 (0, 100, 50, 'red')
 // enemytest.draw(getContext2d)
 //test========
@@ -112,31 +111,24 @@ canvas.addEventListener('click', (event) => {
     console.log(enemytest.clickEnemy(x, y))
 })
 
+
+const enemytest = new Monster (60, 60, 50, 'red')
+const enemies = [enemytest]
+// animate()
+
 function animate(){
     c.clearRect(0, 0, canvas.width, canvas.height)
+    // enemytest.draw(c)
+    // enemytest.update()
+    requestAnimationFrame(animate)
+    enemies.forEach(Monster => {
     enemytest.draw(c)
     enemytest.update()
-    requestAnimationFrame(animate)
+    })
 }
-
-function animate2(){
-    // getContext2d2.clearRect(0, 0, canvasRowOne.width, canvasRowOne.height)
-    enemytest2.draw(c)
-    // enemytest2.update()
-    // requestAnimationFrame(animate2)
-}
-
 animate()
-// animate2()
 
-// function animate(){
-//     getContext2d.clearRect(0, 0, canvasRowOne.width, canvasRowOne.height)
-//     enemytwo.draw(getContext2d)
-//     enemytwo.update()
-//     requestAnimationFrame(animate)
-//     enemytwo.image.addEventListener('click', killMonster)
-// }
-// animate()
+
 // document.getElementById('enemyImage').addEventListener('click', killMonster)
 
 // function killMonster(){
@@ -145,66 +137,9 @@ animate()
 //     document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
 // }
 
-// const clickable = document.getElementById('enemyImage')
-
-
 // startButton.addEventListener("click", animate)
 
-class grid {
-    constructor() {
-        this.position = {
-            x:0,
-            y:0
-        }
-        this.velocity ={
-            x:0,
-            y:0
-        }
-        this.invaders ={
-
-        }
-    }
-}
-
-class Projectile {
-    constructor(x,y,radius,color,velocity) {
-        this.x = x
-        this.y = y
-        this.radius = radius
-        this.color = color
-        this.velocity = velocity
-    }
-
-    draw() {
-        c.beginPath()
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-        c.fillStyle = this.color
-        c.fill()
-    }
-}
-
-window.addEventListener('click', (event) => 
-    {
-    const projectile = new Projectile (
-        event.clientX, event.clientY, 5, 'red', null
-    )
-    console.log(event)
-    projectile.draw(c)
-})
-
-class Circle {
-    constructor(x, y, radius, color) {
-        this.x = x
-        this.y = y
-        this.radius = radius
-        this.color = color
-    }
-    draw() {
-        c.beginPath()
-        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false)
-        c.fill()
-    }
-}
-
-const EnemyCircle = new Circle (30, 30, 30, 'blue')
-// EnemyCircle.draw()
+// GOALS
+// 1) slice from array after click
+// 2) create enemies coming from different directions at different speeds
+// 3) score after click
