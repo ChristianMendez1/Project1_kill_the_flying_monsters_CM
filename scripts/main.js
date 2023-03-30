@@ -517,7 +517,9 @@ function animate(){
 
 ctx.font = "30px Arial";
 ctx.strokeText("Score: " + score.length, 100, 500)
-
+if(score.length == 6){
+    ctx.strokeText('YOU WIN!', 100, 600)
+}
 }
 
 canvas.addEventListener('click', (event) => {
