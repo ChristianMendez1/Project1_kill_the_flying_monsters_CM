@@ -13,3 +13,7 @@ img {
 #backgroundImage {
     display: none;
 }
+
+#startButton {
+    font-size: 40px;
+}
