@@ -49,12 +49,15 @@ class Monster1 {
             +
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
+        // if(enemies.find(enemy12))
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy1), 1)
-            return true;
-        } else {
-            return false;
+            if(enemies.includes(enemy1) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy1), 1)
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
@@ -94,11 +97,13 @@ class Monster2 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy2), 1)
-            return true;
-        } else {
-            return false;
+            if(enemies.includes(enemy2) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy2), 1)
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
@@ -138,11 +143,13 @@ class Monster3 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy3), 1)
-            return true;
-        } else {
-            return false;
+            if(enemies.includes(enemy3) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy3), 1)
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
@@ -182,11 +189,13 @@ class Monster4 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy4), 1)
-            return true;
-        } else {
-            return false;
+            if(enemies.includes(enemy4) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy4), 1)
+                return true;
+            } else {
+                return false;
+            }
         }
     }
 }
@@ -226,12 +235,14 @@ class Monster5 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy5), 1)
-            return true;
+            if(enemies.includes(enemy5) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy5), 1)
+                return true;
         } else {
             return false;
         }
+    }
     }
 }
 
@@ -270,13 +281,15 @@ class Monster6 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy6), 1)
-            return true;
+            if(enemies.includes(enemy6) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy6), 1)
+                return true;
         } else {
             return false;
         }
     }
+}
 }
 
 class Monster7 {
@@ -314,11 +327,13 @@ class Monster7 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy7), 1)
-            return true;
+            if(enemies.includes(enemy7) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy7), 1)
+                return true;
         } else {
             return false;
+        }
         }
     }
 }
@@ -358,11 +373,13 @@ class Monster8 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy8), 1)
-            return true;
+            if(enemies.includes(enemy8) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy8), 1)
+                return true;
         } else {
             return false;
+        }
         }
     }
 }
@@ -402,12 +419,14 @@ class Monster9 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy9), 1)
-            return true;
+            if(enemies.includes(enemy9) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy9), 1)
+                return true;
         } else {
             return false;
         }
+    }
     }
 }
 
@@ -446,12 +465,14 @@ class Monster10 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy10), 1)
-            return true;
+            if(enemies.includes(enemy10) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy10), 1)
+                return true;
         } else {
             return false;
         }
+    }
     }
 }
 
@@ -491,12 +512,14 @@ class Monster11 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy11), 1)
-            return true;
+            if(enemies.includes(enemy11) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy11), 1)
+                return true;
         } else {
             return false;
         }
+    }
     }
 }
 
@@ -534,13 +557,16 @@ class Monster12 {
             +
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
+        // if(enemies.includes(enemy12) = true)
         if (distance <= this.radius) {
-            score.push('score')
-            enemies.splice(enemies.indexOf(enemy12), 1)
-            return true;
+            if(enemies.includes(enemy12) == true){
+                score.push('score')
+                enemies.splice(enemies.indexOf(enemy12), 1)
+                return true;
         } else {
             return false;
         }
+    }
     }
 }
 
@@ -577,7 +603,7 @@ const enemy10 = new Monster10 (1920, 700, 75, 'red', { x: -4, y: -2 })
 const enemy11 = new Monster11 (1920, 600, 75, 'red', { x: -4, y: -1 })
 const enemy12 = new Monster12 (1920, 500, 75, 'red', { x: -3, y: -1 })
 
-const enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
+var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
 const score = []
 
 
@@ -600,6 +626,8 @@ function animate(){
     } else {
     setTimeout(youlose1, 10000);
     }
+
+    
     // document.getElementById('youloseDiv').textContent = "Score: " + score.length;
 
     // setTimeout(() => {
@@ -632,12 +660,8 @@ canvas.addEventListener('click', (event) => {
     console.log(enemy10.clickEnemy(x, y))
     console.log(enemy11.clickEnemy(x, y))
     console.log(enemy12.clickEnemy(x, y))
-
-
-    ctx.strokeStyle = "red";
-    ctx.fillText("Score: " + score.length, 100, 500)
-
-    
+    console.log('x' + event.clientX + 'y' + event.clientY )
+    console.log(enemies.includes(enemy12))
 })
 
 let monsterbutton = document.getElementById('startButton')
