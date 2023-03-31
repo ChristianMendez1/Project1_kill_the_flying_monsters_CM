@@ -491,6 +491,23 @@ class Monster11 {
     }
 }
 
+class Background {
+    constructor(gameWidth, gameHeight){
+        this.gameWidth = gameWidth
+        this.gameHeight = gameHeight
+        this.image = document.getElementById('backgroundImage')
+        this.x = 0;
+        this.y = 0;
+        this.width = '100%'
+        this.height = '100%'
+    }
+    draw(c){
+        c.drawImage(this.image, this.x, this.y);
+    }
+} 
+
+const background = new Background(canvas.width, canvas.height);
+
 const enemy1 = new Monster1 (0, 60, 40, 'red', { x: 1, y: 0 })
 const enemy2 = new Monster2 (0, 120, 40, 'red', { x: 5, y: 0 })
 const enemy3 = new Monster3 (0, 180, 40, 'red', { x: 4, y: 0 })
@@ -508,17 +525,18 @@ const score = []
 function animate(){
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     requestAnimationFrame(animate)
-
+    background.draw(ctx)
     enemies.forEach((Monster) => {
         Monster.draw(ctx)
         Monster.update()
     
 })
 
-ctx.font = "30px Arial";
-ctx.strokeText("Score: " + score.length, 100, 500)
+ctx.strokeStyle = "red";
+ctx.font = "50px Arial";
+ctx.fillText("Score: " + score.length, 100, 550)
 if(score.length == 6){
-    ctx.strokeText('YOU WIN!', 100, 600)
+    ctx.fillText('YOU WIN!', 100, 600)
 }
 }
 
@@ -532,7 +550,9 @@ canvas.addEventListener('click', (event) => {
     console.log(enemy5.clickEnemy(x, y))
     console.log(enemy6.clickEnemy(x, y))
     document.getElementById('scoreDiv').textContent = "Score: " + score.length;
-    ctx.strokeText("Score: " + score.length, 100, 500)
+
+    ctx.strokeStyle = "red";
+    ctx.fillText("Score: " + score.length, 100, 500)
 })
 
 
@@ -563,6 +583,11 @@ animate()
 // 1) slice from array after click
 // 2) create enemies coming from different directions at different speeds
 // 3) score after click
+// 4) find faster way to create more classes
+// 5)time out to come from different directions
+// 6) add animations
+// 7) if last monster hits edge of screen and you dont have score, you lose
+
 
 
 
