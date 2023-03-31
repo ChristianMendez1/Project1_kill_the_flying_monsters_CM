@@ -1,3 +1,5 @@
+window.addEventListener('load', function(){
+
 
 //setup
 const canvas = document.querySelector('canvas')
@@ -619,7 +621,16 @@ canvas.addEventListener('click', (event) => {
     ctx.fillText("Score: " + score.length, 100, 500)
 })
 
-animate()
+
+
+this.document.getElementById('startButton').addEventListener("click", something)
+function something(){
+    animate()
+}
+
+
+
+})
 
 
 
@@ -739,4 +750,4 @@ animate()
 //         console.log(enemies)
 //     }, 3000 )
     
-// }
+// 
