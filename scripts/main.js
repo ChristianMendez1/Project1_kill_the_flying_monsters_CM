@@ -597,8 +597,25 @@ function animate(){
     // ctx.fillText('YOU WIN!', 650, 400)
     if(score.length == 12){
         ctx.fillText('YOU WIN!', 650, 400)
+    } else {
+    setTimeout(youlose1, 10000);
+    }
+    // document.getElementById('youloseDiv').textContent = "Score: " + score.length;
+
+    // setTimeout(() => {
+    //     document.getElementById('youloseDiv').textContent = 'You lose!'
+    //       }, 10000);
+    //     }
+    
+
+}
+
+function youlose1(){
+    if(score.length !== 12){
+        document.getElementById('youloseDiv').textContent = 'You lose!'
     }
 }
+
 
 canvas.addEventListener('click', (event) => {
     const x = event.clientX 
@@ -615,17 +632,19 @@ canvas.addEventListener('click', (event) => {
     console.log(enemy10.clickEnemy(x, y))
     console.log(enemy11.clickEnemy(x, y))
     console.log(enemy12.clickEnemy(x, y))
-    document.getElementById('scoreDiv').textContent = "Score: " + score.length;
+
 
     ctx.strokeStyle = "red";
     ctx.fillText("Score: " + score.length, 100, 500)
+
+    
 })
 
-
-
-this.document.getElementById('startButton').addEventListener("click", something)
+let monsterbutton = document.getElementById('startButton')
+monsterbutton.addEventListener("click", something)
 function something(){
     animate()
+    monsterbutton.style.display = 'none'
 }
 
 
