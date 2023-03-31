@@ -19,8 +19,8 @@ class Monster1 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -28,8 +28,8 @@ class Monster1 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -63,8 +63,8 @@ class Monster2 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -72,8 +72,8 @@ class Monster2 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -107,8 +107,8 @@ class Monster3 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -116,8 +116,8 @@ class Monster3 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -151,8 +151,8 @@ class Monster4 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -160,8 +160,8 @@ class Monster4 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -195,8 +195,8 @@ class Monster5 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -204,8 +204,8 @@ class Monster5 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -239,8 +239,8 @@ class Monster6 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
+        this.width = 150;
+        this.height = 150;
         this.image = document.getElementById('enemyImage');
         this.velocity = velocity
     }
@@ -248,8 +248,8 @@ class Monster6 {
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -283,17 +283,17 @@ class Monster7 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -327,17 +327,17 @@ class Monster8 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -371,17 +371,17 @@ class Monster9 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -415,17 +415,17 @@ class Monster10 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -459,17 +459,17 @@ class Monster11 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -504,17 +504,17 @@ class Monster12 {
         this.y = y;
         this.radius = radius;
         this.color = color;
-        this.width = 80;
-        this.height = 80;
-        this.image = document.getElementById('enemyImage');
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
         this.velocity = velocity
     }
     draw(c){
         c.beginPath()
         c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
         c.fillStyle = this.color;
-        c.fill()
-        c.stroke();
+        // c.fill()
+        // c.stroke();
         c.closePath()
         c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
     }
@@ -560,22 +560,22 @@ class Background {
 
 const background = new Background(canvas.width, canvas.height);
 //horizontal
-const enemy1 = new Monster1 (0, 60, 40, 'red', { x: 1, y: 0 })
-const enemy2 = new Monster2 (0, 120, 40, 'red', { x: 4, y: 0 })
-const enemy3 = new Monster3 (0, 180, 40, 'red', { x: 3, y: 0 })
-const enemy4 = new Monster4 (0, 240, 40, 'red', { x: 5, y: 0 })
-const enemy5 = new Monster5 (0, 360, 40, 'red', { x: 3, y: 0 })
-const enemy6 = new Monster6 (0, 420, 40, 'red', { x: 1, y: 0 })
+const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 1, y: 0 })
+const enemy2 = new Monster2 (0, 120, 75, 'red', { x: 4, y: 0 })
+const enemy3 = new Monster3 (0, 180, 75, 'red', { x: 3, y: 0 })
+const enemy4 = new Monster4 (0, 240, 75, 'red', { x: 5, y: 0 })
+const enemy5 = new Monster5 (0, 360, 75, 'red', { x: 3, y: 0 })
+const enemy6 = new Monster6 (0, 420, 75, 'red', { x: 1, y: 0 })
 
 //diaganol
-const enemy7 = new Monster7 (1920, 1080, 40, 'red', { x: -1, y: -2})
-const enemy8 = new Monster8 (1920, 900, 40, 'red', { x: -2, y: -2 })
-const enemy9 = new Monster9 (1920, 800, 40, 'red', { x: -1, y: -2 })
-const enemy10 = new Monster10 (1920, 700, 40, 'red', { x: -2, y: -2 })
-const enemy11 = new Monster11 (1920, 600, 40, 'red', { x: -4, y: -1 })
-const enemy12 = new Monster12 (1920, 500, 40, 'red', { x: -3, y: -1 })
+const enemy7 = new Monster7 (1920, 1080, 75, 'red', { x: -1, y: -2})
+const enemy8 = new Monster8 (1920, 900, 75, 'red', { x: -2, y: -2 })
+const enemy9 = new Monster9 (1920, 800, 75, 'red', { x: -1, y: -2 })
+const enemy10 = new Monster10 (1920, 700, 75, 'red', { x: -4, y: -2 })
+const enemy11 = new Monster11 (1920, 600, 75, 'red', { x: -4, y: -1 })
+const enemy12 = new Monster12 (1920, 500, 75, 'red', { x: -3, y: -1 })
 
-const enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9, enemy10, enemy11,enemy12]
+const enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
 const score = []
 
 
@@ -588,11 +588,13 @@ function animate(){
         Monster.draw(ctx)
         Monster.update()
     })
-    ctx.strokeStyle = "red";
-    ctx.font = "50px Arial";
-    ctx.fillText("Score: " + score.length, 100, 550)
+    ctx.strokeStyle = "white";
+    ctx.font = "40px Arial";
+    ctx.fillText("Score: " + score.length, 10, 700)
+    // ctx.font = "150px Arial";
+    // ctx.fillText('YOU WIN!', 650, 400)
     if(score.length == 12){
-        ctx.fillText('YOU WIN!', 100, 600)
+        ctx.fillText('YOU WIN!', 650, 400)
     }
 }
 
