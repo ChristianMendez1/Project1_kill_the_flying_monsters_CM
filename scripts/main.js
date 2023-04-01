@@ -1,4 +1,3 @@
-
 //setup
 const canvas1 = document.getElementById('canvas1')
 const ctx1 = canvas1.getContext('2d')
@@ -9,9 +8,6 @@ const ctx2 = canvas2.getContext('2d')
 const canvas3 = document.getElementById('canvas3')
 const ctx3 = canvas3.getContext('2d')
 
-// var window_width = window.innerWidth;
-// var window_height = window.innerHeight;
-
 canvas1.width = 1800
 canvas1.height = 800
 
@@ -21,10 +17,7 @@ canvas2.height = 800
 canvas3.width = 1800
 canvas3.height = 800
 
-console.log(canvas1)
-//setupend
-
-// monster class
+// monster classes
 class Monster1 {
     constructor(x, y, radius, color, velocity){
         this.x = x;
@@ -1136,6 +1129,7 @@ class Monster24 {
     }
 }
 
+//background
 
 class Background {
     constructor(gameWidth, gameHeight){
@@ -1153,6 +1147,9 @@ class Background {
 } 
 
 const background = new Background(canvas1.width, canvas1.height);
+
+//new monster objects
+
 //level1 horizontal
 const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 5, y: 0 })
 const enemy2 = new Monster2 (0, 120, 75, 'red', { x: 7, y: 0 })
@@ -1183,10 +1180,14 @@ const enemy22 = new Monster22 (75, 'red', { x: -9, y: -3 })
 const enemy23 = new Monster23 (75, 'red', { x: -9, y: -2 })
 const enemy24 = new Monster24 (75, 'red', { x: -8, y: -2 })
 
+//arrays
+
 var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6]
 var enemies1= [enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
 var enemies2= [enemy13, enemy14, enemy15, enemy16, enemy17, enemy18, enemy19, enemy20, enemy21, enemy22, enemy23, enemy24]
 const score = []
+
+//buttons
 
 let monsterbutton = document.getElementById('startButton')
 monsterbutton.addEventListener("click", something)
@@ -1196,6 +1197,8 @@ level2button.addEventListener("click", something1)
 
 let level3button = document.getElementById('level3')
 level3button.addEventListener("click", something2)
+
+//losing functions
 
 function youlose1(){
     if(score.length !== 6 && score.length < 6){
@@ -1214,6 +1217,8 @@ function youlose3(){
         document.getElementById('youloseDiv').textContent = 'You lose!'
     }
 }
+
+//game and level functions
 
 function something(){
     animate()
@@ -1287,6 +1292,8 @@ function level3(){
     }
 }
 
+//eventlisteners that track monsters
+
 canvas1.addEventListener('click', (event) => {
     const x = event.clientX 
     const y = event.clientY 
@@ -1328,130 +1335,3 @@ canvas3.addEventListener('click', (event) => {
     console.log(enemy24.clickEnemy(x, y))
     console.log('x' + event.clientX + 'y' + event.clientY )
 })
-
-
-
-
-
-//end
-
-
-
-
-// spawnEnemies()
-
-// canvas.addEventListener('click', (event) => {
-//     const x = event.clientX 
-//     const y = event.clientY 
-//     console.log(enemytest2.clickEnemy(x, y))
-// })
-
-// document.getElementById('scoreDiv').addEventListener('click', killMonster)
-
-// function killMonster(){
-//     deadMonsters.push('dead')
-//     // flyingEnemy.drawImage.style.display = "none"
-//     document.getElementById('statsDiv').textContent ='There are ' + deadMonsters.length + ' dead monsters'
-// }
-
-// startButton.addEventListener("click", animate)
-
-// GOALS
-// 1) slice from array after click
-// 2) create enemies coming from different directions at different speeds
-// 3) score after click
-// 4) find faster way to create more classes
-// 5)time out to come from different directions
-// 6) add animations
-// 7) if last monster hits edge of screen and you dont have score, you lose
-
-
-
-
-
-
-//junk for now===================
-//     canvas.addEventListener('click', (event) => {
-//         const x = event.clientX 
-//         const y = event.clientY 
-//         console.log(enemytest.clickEnemy(x, y))
-//         if (enemytest.clickEnemy(x, y) === true){
-//             enemies.splice(enemies.indexOf(enemytest), 1)
-//         }
-//     })
-// }
-// }
-
-// class Monster2 {
-//     constructor(x, y, radius, color){
-//         this.x = x;
-//         this.y = y;
-//         this.radius = radius;
-//         this.color = color;
-//         this.width = 100;
-//         this.height = 100;
-//         this.image = document.getElementById('enemyImage');
-//     }
-//     draw(context){
-
-//         context.beginPath()
-//         context.arc(this.x + this.width/2, this.y + this.height/2 , this.radius, 0, Math.PI * 2, false);
-//         context.fillStyle = this.color;
-//         context.fill()
-//         context.stroke();
-//         context.closePath()
-//         // context.drawImage(this.image, this.xpoint, this.ypoint, this.width, this.height)
-//     }
-
-//     update(){
-//         this.xpoint+=4;
-//     }
-    
-//     clickEnemy(xmouse, ymouse) {
-//         const distance =
-//         Math.sqrt(
-//             (( xmouse - (this.x + this.width/2)) * (ymouse - (this.x + this.width/2)))
-//             +
-//             (( ymouse - (this.y + this.height/2) ) * (ymouse - (this.y + this.height/2)))
-//         );
-//         if (distance < this.radius) {
-//             return true;
-//         // } else {
-//         //     return false;
-//         }
-//         canvas.addEventListener('click', (event) => {
-//             const x = event.clientX 
-//             const y = event.clientY 
-//             console.log(enemytest.clickEnemy(x, y))
-//             if (enemytest.clickEnemy(x, y) === true){
-//                 enemies.splice(enemies.indexOf(enemytest), 1)
-//             }
-//         })
-
-//     }
-
-//     dead(){
-        
-//     }
-// }
-
-// const enemytest2 = new Monster2 (0, 100, 50, 'red')
-// enemytest.draw(getContext2d)
-//test========
-
-
-// function spawnEnemies(){
-//     setInterval(() => {
-//         const x = 100
-//         const y = 100
-//         const radius = 30
-//         const color = 'red'
-//         const velocity = {
-//             x:1,
-//             y:0
-//         }
-//         enemies.push(new Monster(x, y, radius, color, velocity))
-//         console.log(enemies)
-//     }, 3000 )
-    
-// 
