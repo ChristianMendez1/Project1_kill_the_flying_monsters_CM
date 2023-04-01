@@ -631,6 +631,8 @@ function animate(){
     if(score.length == 6){
         canvas1.style.display = 'none'
         canvas2.style.display = 'inline'
+        level2button.style.display = 'inline'
+
     } else {
     setTimeout(youlose1, 10000);
     }
