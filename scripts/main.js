@@ -1,5 +1,3 @@
-window.addEventListener('load', function(){
-
 
 //setup
 const canvas1 = document.getElementById('canvas1')
@@ -1190,9 +1188,47 @@ var enemies1= [enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
 var enemies2= [enemy13, enemy14, enemy15, enemy16, enemy17, enemy18, enemy19, enemy20, enemy21, enemy22, enemy23, enemy24]
 const score = []
 
+let monsterbutton = document.getElementById('startButton')
+monsterbutton.addEventListener("click", something)
+
+let level2button = document.getElementById('level2')
+level2button.addEventListener("click", something1)
+
+let level3button = document.getElementById('level3')
+level3button.addEventListener("click", something2)
+
+function youlose1(){
+    if(score.length !== 6){
+        document.getElementById('youloseDiv').textContent = 'You lose!'
+    }
+}
+
+function youlose2(){
+    if(score.length !== 12){
+        document.getElementById('youloseDiv').textContent = 'You lose!'
+    }
+}
+
+function youlose3(){
+    if(score.length !== 24){
+        document.getElementById('youloseDiv').textContent = 'You lose!'
+    }
+}
+
+function something(){
+    animate()
+    monsterbutton.style.display = 'none'
+}
+
+function something1(){
+    level2()
+}
+
+function something2(){
+    level3()
+}
 
 function animate(){
-    
     ctx1.clearRect(0, 0, canvas1.width, canvas1.height)
     requestAnimationFrame(animate)
     background.draw(ctx1)
@@ -1215,23 +1251,8 @@ function animate(){
     }
 }
 
-function youlose1(){
-    if(score.length !== 12){
-        document.getElementById('youloseDiv').textContent = 'You lose!'
-    }
-}
-
-let level2button = document.getElementById('level2')
-level2button.addEventListener("click", something1)
-
-let level3button = document.getElementById('level3')
-level3button.addEventListener("click", something2)
-
-function something1(){
-    level2()
-}
-
 function level2(){
+    level2button.style.display = 'none'
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
     requestAnimationFrame(level2)
     background.draw(ctx2)
@@ -1244,14 +1265,13 @@ function level2(){
         canvas3.style.display = 'inline'
         level2button.style.display = 'none'
         level3button.style.display = 'inline'
+    } else {
+    setTimeout(youlose2, 10000);
     }
 }
 
-function something2(){
-    level3()
-}
-
 function level3(){
+    level3button.style.display = 'none'
     ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
     requestAnimationFrame(level3)
     background.draw(ctx3)
@@ -1259,8 +1279,13 @@ function level3(){
         Monster.draw(ctx3)
         Monster.update()
     })
+    if (score.length == 24){
+        ctx3.font = "150px Arial";
+        ctx3.fillText('YOU WIN!', 650, 400)
+    } else {
+        setTimeout(youlose3, 10000);
+    }
 }
-
 
 canvas1.addEventListener('click', (event) => {
     const x = event.clientX 
@@ -1305,16 +1330,11 @@ canvas3.addEventListener('click', (event) => {
 })
 
 
-let monsterbutton = document.getElementById('startButton')
-monsterbutton.addEventListener("click", something)
-function something(){
-    animate()
-    monsterbutton.style.display = 'none'
-}
+
 
 
 //end
-})
+
 
 
 
