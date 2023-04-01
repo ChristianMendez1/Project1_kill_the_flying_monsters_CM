@@ -2,16 +2,22 @@ window.addEventListener('load', function(){
 
 
 //setup
-const canvas = document.querySelector('canvas')
-const ctx = canvas.getContext('2d')
+const canvas1 = document.getElementById('canvas1')
+const ctx1 = canvas1.getContext('2d')
+
+const canvas2 = document.getElementById('canvas2')
+const ctx2 = canvas2.getContext('2d')
 
 var window_width = window.innerWidth;
 var window_height = window.innerHeight;
 
-canvas.width = 1800
-canvas.height = 800
+canvas1.width = 1800
+canvas1.height = 800
 
-console.log(canvas)
+canvas2.width = 1800
+canvas2.height = 800
+
+console.log(canvas1)
 //setupend
 
 // monster class
@@ -293,9 +299,9 @@ class Monster6 {
 }
 
 class Monster7 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 1080;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -327,9 +333,9 @@ class Monster7 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            if(enemies.includes(enemy7) == true){
+            if(enemies1.includes(enemy7) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy7), 1)
+                enemies1.splice(enemies1.indexOf(enemy7), 1)
                 return true;
         } else {
             return false;
@@ -339,9 +345,9 @@ class Monster7 {
 }
 
 class Monster8 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 900;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -373,9 +379,9 @@ class Monster8 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            if(enemies.includes(enemy8) == true){
+            if(enemies1.includes(enemy8) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy8), 1)
+                enemies1.splice(enemies1.indexOf(enemy8), 1)
                 return true;
         } else {
             return false;
@@ -385,9 +391,9 @@ class Monster8 {
 }
 
 class Monster9 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 800;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -419,9 +425,9 @@ class Monster9 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            if(enemies.includes(enemy9) == true){
+            if(enemies1.includes(enemy9) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy9), 1)
+                enemies1.splice(enemies1.indexOf(enemy9), 1)
                 return true;
         } else {
             return false;
@@ -431,9 +437,9 @@ class Monster9 {
 }
 
 class Monster10 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 700;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -465,9 +471,9 @@ class Monster10 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            if(enemies.includes(enemy10) == true){
+            if(enemies1.includes(enemy10) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy10), 1)
+                enemies1.splice(enemies1.indexOf(enemy10), 1)
                 return true;
         } else {
             return false;
@@ -477,9 +483,9 @@ class Monster10 {
 }
 
 class Monster11 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 600;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -499,7 +505,7 @@ class Monster11 {
 
     update(){
         // this.x++;
-        this.draw(ctx)
+        this.draw(ctx1)
         this.x = this.x + this.velocity.x
         this.y = this.y + this.velocity.y
     }
@@ -512,9 +518,9 @@ class Monster11 {
             (( ymouse - this.y)  *  (ymouse - this.y))
         )
         if (distance <= this.radius) {
-            if(enemies.includes(enemy11) == true){
+            if(enemies1.includes(enemy11) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy11), 1)
+                enemies1.splice(enemies1.indexOf(enemy11), 1)
                 return true;
         } else {
             return false;
@@ -524,9 +530,9 @@ class Monster11 {
 }
 
 class Monster12 {
-    constructor(x, y, radius, color, velocity){
-        this.x = x;
-        this.y = y;
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 500;
         this.radius = radius;
         this.color = color;
         this.width = 150;
@@ -559,9 +565,9 @@ class Monster12 {
         )
         // if(enemies.includes(enemy12) = true)
         if (distance <= this.radius) {
-            if(enemies.includes(enemy12) == true){
+            if(enemies1.includes(enemy12) == true){
                 score.push('score')
-                enemies.splice(enemies.indexOf(enemy12), 1)
+                enemies1.splice(enemies1.indexOf(enemy12), 1)
                 return true;
         } else {
             return false;
@@ -586,7 +592,7 @@ class Background {
     }
 } 
 
-const background = new Background(canvas.width, canvas.height);
+const background = new Background(canvas1.width, canvas1.height);
 //horizontal
 const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 1, y: 0 })
 const enemy2 = new Monster2 (0, 120, 75, 'red', { x: 4, y: 0 })
@@ -596,46 +602,38 @@ const enemy5 = new Monster5 (0, 360, 75, 'red', { x: 3, y: 0 })
 const enemy6 = new Monster6 (0, 420, 75, 'red', { x: 1, y: 0 })
 
 //diaganol
-const enemy7 = new Monster7 (1920, 1080, 75, 'red', { x: -1, y: -2})
-const enemy8 = new Monster8 (1920, 900, 75, 'red', { x: -2, y: -2 })
-const enemy9 = new Monster9 (1920, 800, 75, 'red', { x: -1, y: -2 })
-const enemy10 = new Monster10 (1920, 700, 75, 'red', { x: -4, y: -2 })
-const enemy11 = new Monster11 (1920, 600, 75, 'red', { x: -4, y: -1 })
-const enemy12 = new Monster12 (1920, 500, 75, 'red', { x: -3, y: -1 })
+const enemy7 = new Monster7 (75, 'red', { x: -1, y: -2})
+const enemy8 = new Monster8 (75, 'red', { x: -2, y: -2 })
+const enemy9 = new Monster9 (75, 'red', { x: -1, y: -2 })
+const enemy10 = new Monster10 (75, 'red', { x: -4, y: -2 })
+const enemy11 = new Monster11 (75, 'red', { x: -4, y: -1 })
+const enemy12 = new Monster12 (75, 'red', { x: -3, y: -1 })
 
-var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6, enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
+var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6]
+var enemies1= [enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
 const score = []
 
 
 function animate(){
     
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx1.clearRect(0, 0, canvas1.width, canvas1.height)
     requestAnimationFrame(animate)
-    background.draw(ctx)
+    background.draw(ctx1)
     enemies.forEach((Monster) => {
-        Monster.draw(ctx)
+        Monster.draw(ctx1)
         Monster.update()
     })
-    ctx.strokeStyle = "white";
-    ctx.font = "40px Arial";
-    ctx.fillText("Score: " + score.length, 10, 700)
+    ctx1.strokeStyle = "white";
+    ctx1.font = "40px Arial";
+    ctx1.fillText("Score: " + score.length, 10, 700)
     // ctx.font = "150px Arial";
     // ctx.fillText('YOU WIN!', 650, 400)
-    if(score.length == 12){
-        ctx.fillText('YOU WIN!', 650, 400)
+    if(score.length == 6){
+        canvas1.style.display = 'none'
+        canvas2.style.display = 'inline'
     } else {
     setTimeout(youlose1, 10000);
     }
-
-    
-    // document.getElementById('youloseDiv').textContent = "Score: " + score.length;
-
-    // setTimeout(() => {
-    //     document.getElementById('youloseDiv').textContent = 'You lose!'
-    //       }, 10000);
-    //     }
-    
-
 }
 
 function youlose1(){
@@ -644,8 +642,26 @@ function youlose1(){
     }
 }
 
+let level2button = document.getElementById('level2')
+level2button.addEventListener("click", something1)
 
-canvas.addEventListener('click', (event) => {
+function something1(){
+    level2()
+}
+
+function level2(){
+    ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
+    requestAnimationFrame(level2)
+    background.draw(ctx2)
+    enemies1.forEach((Monster) => {
+        Monster.draw(ctx2)
+        Monster.update()
+    })
+
+}
+
+
+canvas1.addEventListener('click', (event) => {
     const x = event.clientX 
     const y = event.clientY 
     console.log(enemy1.clickEnemy(x, y))
@@ -654,6 +670,13 @@ canvas.addEventListener('click', (event) => {
     console.log(enemy4.clickEnemy(x, y))
     console.log(enemy5.clickEnemy(x, y))
     console.log(enemy6.clickEnemy(x, y))
+    console.log('x' + event.clientX + 'y' + event.clientY )
+    console.log(enemies.includes(enemy12))
+})
+
+canvas2.addEventListener('click', (event) => {
+    const x = event.clientX 
+    const y = event.clientY 
     console.log(enemy7.clickEnemy(x, y))
     console.log(enemy8.clickEnemy(x, y))
     console.log(enemy9.clickEnemy(x, y))
@@ -664,6 +687,7 @@ canvas.addEventListener('click', (event) => {
     console.log(enemies.includes(enemy12))
 })
 
+
 let monsterbutton = document.getElementById('startButton')
 monsterbutton.addEventListener("click", something)
 function something(){
@@ -672,7 +696,7 @@ function something(){
 }
 
 
-
+//end
 })
 
 

@@ -22,3 +22,7 @@ img {
 #startButton {
     font-size: 40px;
 }
+
+#canvas2 {
+    display: none;
+}
