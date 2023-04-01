@@ -1198,19 +1198,19 @@ let level3button = document.getElementById('level3')
 level3button.addEventListener("click", something2)
 
 function youlose1(){
-    if(score.length !== 6){
+    if(score.length !== 6 && score.length < 6){
         document.getElementById('youloseDiv').textContent = 'You lose!'
     }
 }
 
 function youlose2(){
-    if(score.length !== 12){
+    if(score.length !== 12 && score.length < 12){
         document.getElementById('youloseDiv').textContent = 'You lose!'
     }
 }
 
 function youlose3(){
-    if(score.length !== 24){
+    if(score.length !== 24 && score.length < 24){
         document.getElementById('youloseDiv').textContent = 'You lose!'
     }
 }
