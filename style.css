@@ -27,6 +27,14 @@ img {
     display: none;
 }
 
+#canvas3 {
+    display: none;
+}
+
 #level2 {
     display: none;
+}
+
+#level3 {
+    display:none;
 }

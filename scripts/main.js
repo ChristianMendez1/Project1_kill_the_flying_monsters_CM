@@ -8,14 +8,20 @@ const ctx1 = canvas1.getContext('2d')
 const canvas2 = document.getElementById('canvas2')
 const ctx2 = canvas2.getContext('2d')
 
-var window_width = window.innerWidth;
-var window_height = window.innerHeight;
+const canvas3 = document.getElementById('canvas3')
+const ctx3 = canvas3.getContext('2d')
+
+// var window_width = window.innerWidth;
+// var window_height = window.innerHeight;
 
 canvas1.width = 1800
 canvas1.height = 800
 
 canvas2.width = 1800
 canvas2.height = 800
+
+canvas3.width = 1800
+canvas3.height = 800
 
 console.log(canvas1)
 //setupend
@@ -576,6 +582,562 @@ class Monster12 {
     }
 }
 
+// level 3================================================================
+class Monster13 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        // if(enemies.find(enemy12))
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy13) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy13), 1)
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+
+class Monster14 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy14) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy14), 1)
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+
+class Monster15 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy15) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy15), 1)
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+
+class Monster16 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy16) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy16), 1)
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
+
+class Monster17 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy17) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy17), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+    }
+}
+
+class Monster18 {
+    constructor(x, y, radius, color, velocity){
+        this.x = x;
+        this.y = y;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy18) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy18), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+}
+}
+
+class Monster19 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 1080;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy19) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy19), 1)
+                return true;
+        } else {
+            return false;
+        }
+        }
+    }
+}
+
+class Monster20 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 900;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy20) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy20), 1)
+                return true;
+        } else {
+            return false;
+        }
+        }
+    }
+}
+
+class Monster21 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 800;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy21) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy21), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+    }
+}
+
+class Monster22 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 700;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy22) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy22), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+    }
+}
+
+class Monster23 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 600;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.draw(ctx1)
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy23) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy23), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+    }
+}
+
+class Monster24 {
+    constructor(radius, color, velocity){
+        this.x = 1920;
+        this.y = 500;
+        this.radius = radius;
+        this.color = color;
+        this.width = 150;
+        this.height = 150;
+        this.image = document.getElementById('enemyImage2');
+        this.velocity = velocity
+    }
+    draw(c){
+        c.beginPath()
+        c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+        c.fillStyle = this.color;
+        // c.fill()
+        // c.stroke();
+        c.closePath()
+        c.drawImage(this.image, this.x - this.width/2, this.y - this.height/2, this.width, this.height)
+    }
+
+    update(){
+        // this.x++;
+        this.x = this.x + this.velocity.x
+        this.y = this.y + this.velocity.y
+    }
+    
+    clickEnemy(xmouse, ymouse) {
+        const distance =
+        Math.sqrt(
+            (( xmouse - this.x ) * (xmouse - this.x))
+            +
+            (( ymouse - this.y)  *  (ymouse - this.y))
+        )
+        // if(enemies.includes(enemy12) = true)
+        if (distance <= this.radius) {
+            if(enemies2.includes(enemy24) == true){
+                score.push('score')
+                enemies2.splice(enemies2.indexOf(enemy24), 1)
+                return true;
+        } else {
+            return false;
+        }
+    }
+    }
+}
+
 
 class Background {
     constructor(gameWidth, gameHeight){
@@ -593,24 +1155,39 @@ class Background {
 } 
 
 const background = new Background(canvas1.width, canvas1.height);
-//horizontal
-const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 1, y: 0 })
-const enemy2 = new Monster2 (0, 120, 75, 'red', { x: 4, y: 0 })
-const enemy3 = new Monster3 (0, 180, 75, 'red', { x: 3, y: 0 })
-const enemy4 = new Monster4 (0, 240, 75, 'red', { x: 5, y: 0 })
-const enemy5 = new Monster5 (0, 360, 75, 'red', { x: 3, y: 0 })
-const enemy6 = new Monster6 (0, 420, 75, 'red', { x: 1, y: 0 })
+//level1 horizontal
+const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 3, y: 0 })
+const enemy2 = new Monster2 (0, 120, 75, 'red', { x: 5, y: 0 })
+const enemy3 = new Monster3 (0, 180, 75, 'red', { x: 4, y: 0 })
+const enemy4 = new Monster4 (0, 240, 75, 'red', { x: 6, y: 0 })
+const enemy5 = new Monster5 (0, 360, 75, 'red', { x: 4, y: 0 })
+const enemy6 = new Monster6 (0, 420, 75, 'red', { x: 2, y: 0 })
 
-//diaganol
-const enemy7 = new Monster7 (75, 'red', { x: -1, y: -2})
-const enemy8 = new Monster8 (75, 'red', { x: -2, y: -2 })
-const enemy9 = new Monster9 (75, 'red', { x: -1, y: -2 })
-const enemy10 = new Monster10 (75, 'red', { x: -4, y: -2 })
-const enemy11 = new Monster11 (75, 'red', { x: -4, y: -1 })
-const enemy12 = new Monster12 (75, 'red', { x: -3, y: -1 })
+//level2 disagonal
+const enemy7 = new Monster7 (75, 'red', { x: -6, y: -3})
+const enemy8 = new Monster8 (75, 'red', { x: -7, y: -3 })
+const enemy9 = new Monster9 (75, 'red', { x: -6, y: -3 })
+const enemy10 = new Monster10 (75, 'red', { x: -9, y: -3 })
+const enemy11 = new Monster11 (75, 'red', { x: -9, y: -2 })
+const enemy12 = new Monster12 (75, 'red', { x: -8, y: -2 })
+
+//level3 horizontal and diagonal
+const enemy13 = new Monster13 (0, 60, 75, 'red', { x: 3, y: 0 })
+const enemy14 = new Monster14 (0, 120, 75, 'red', { x: 5, y: 0 })
+const enemy15 = new Monster15 (0, 180, 75, 'red', { x: 4, y: 0 })
+const enemy16 = new Monster16 (0, 240, 75, 'red', { x: 6, y: 0 })
+const enemy17 = new Monster17 (0, 360, 75, 'red', { x: 4, y: 0 })
+const enemy18 = new Monster18 (0, 420, 75, 'red', { x: 2, y: 0 })
+const enemy19 = new Monster19 (75, 'red', { x: -6, y: -3})
+const enemy20 = new Monster20 (75, 'red', { x: -7, y: -3 })
+const enemy21 = new Monster21 (75, 'red', { x: -6, y: -3 })
+const enemy22 = new Monster22 (75, 'red', { x: -9, y: -3 })
+const enemy23 = new Monster23 (75, 'red', { x: -9, y: -2 })
+const enemy24 = new Monster24 (75, 'red', { x: -8, y: -2 })
 
 var enemies = [enemy1, enemy2, enemy3, enemy4, enemy5, enemy6]
 var enemies1= [enemy7, enemy8, enemy9, enemy10, enemy11, enemy12]
+var enemies2= [enemy13, enemy14, enemy15, enemy16, enemy17, enemy18, enemy19, enemy20, enemy21, enemy22, enemy23, enemy24]
 const score = []
 
 
@@ -647,6 +1224,9 @@ function youlose1(){
 let level2button = document.getElementById('level2')
 level2button.addEventListener("click", something1)
 
+let level3button = document.getElementById('level3')
+level3button.addEventListener("click", something2)
+
 function something1(){
     level2()
 }
@@ -659,7 +1239,26 @@ function level2(){
         Monster.draw(ctx2)
         Monster.update()
     })
+    if(score.length == 12){
+        canvas2.style.display = 'none'
+        canvas3.style.display = 'inline'
+        level2button.style.display = 'none'
+        level3button.style.display = 'inline'
+    }
+}
 
+function something2(){
+    level3()
+}
+
+function level3(){
+    ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
+    requestAnimationFrame(level3)
+    background.draw(ctx3)
+    enemies2.forEach((Monster) => {
+        Monster.draw(ctx3)
+        Monster.update()
+    })
 }
 
 
@@ -673,7 +1272,6 @@ canvas1.addEventListener('click', (event) => {
     console.log(enemy5.clickEnemy(x, y))
     console.log(enemy6.clickEnemy(x, y))
     console.log('x' + event.clientX + 'y' + event.clientY )
-    console.log(enemies.includes(enemy12))
 })
 
 canvas2.addEventListener('click', (event) => {
@@ -686,7 +1284,24 @@ canvas2.addEventListener('click', (event) => {
     console.log(enemy11.clickEnemy(x, y))
     console.log(enemy12.clickEnemy(x, y))
     console.log('x' + event.clientX + 'y' + event.clientY )
-    console.log(enemies.includes(enemy12))
+})
+
+canvas3.addEventListener('click', (event) => {
+    const x = event.clientX 
+    const y = event.clientY 
+    console.log(enemy13.clickEnemy(x, y))
+    console.log(enemy14.clickEnemy(x, y))
+    console.log(enemy15.clickEnemy(x, y))
+    console.log(enemy16.clickEnemy(x, y))
+    console.log(enemy17.clickEnemy(x, y))
+    console.log(enemy18.clickEnemy(x, y))
+    console.log(enemy19.clickEnemy(x, y))
+    console.log(enemy20.clickEnemy(x, y))
+    console.log(enemy21.clickEnemy(x, y))
+    console.log(enemy22.clickEnemy(x, y))
+    console.log(enemy23.clickEnemy(x, y))
+    console.log(enemy24.clickEnemy(x, y))
+    console.log('x' + event.clientX + 'y' + event.clientY )
 })
 
 
