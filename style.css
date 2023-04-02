@@ -7,7 +7,6 @@ img {
 }
 
 #enemyImage {
-    transform: scaleX(-1);
     display: none;
 }
 
@@ -24,24 +23,32 @@ img {
 }
 
 #startButtonDiv {
-    position:absolute;
+    position: absolute;
     background-color: black;
+    top: 350px;
+    left: 850px;
 }
 
 #level2Div {
     position:absolute;
     background-color: black;
+    top: 350px;
+    left: 850px;
 }
 
 #level3Div {
     position:absolute;
     background-color: black;
+    top: 350px;
+    left: 850px;
 }
 
 #youloseDiv {
     position: absolute;
     background-color: black;
     color: white;
+    top: 350px;
+    left: 850px;
 }
 
 #canvas1 {
