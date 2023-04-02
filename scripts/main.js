@@ -1220,6 +1220,10 @@ function youlose3(){
     }
 }
 
+function youwinDiv(){
+    document.getElementById('youwinDiv').textContent = 'You Win!'
+    }
+
 //game and level functions
 
 function level1Func(){
@@ -1262,6 +1266,8 @@ function level2(){
         Monster.draw(ctx2)
         Monster.update()
     })
+    ctx2.font = "40px Arial";
+    ctx2.fillText("Score: " + score.length, 10, 700)
     if(score.length == 12){
         canvas2.style.display = 'none'
         canvas3.style.display = 'inline'
@@ -1277,13 +1283,14 @@ function level3(){
     ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
     requestAnimationFrame(level3)
     background.draw(ctx3)
+    ctx3.font = "40px Arial";
+    ctx3.fillText("Score: " + score.length, 10, 700)
     enemies2.forEach((Monster) => {
         Monster.draw(ctx3)
         Monster.update()
     })
     if (score.length == 24){
-        ctx3.font = "150px Arial";
-        ctx3.fillText('YOU WIN!', 650, 400)
+        youwinDiv()
     } else {
         setTimeout(youlose3, 8000);
     }

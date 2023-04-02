@@ -26,21 +26,21 @@ img {
     position: absolute;
     background-color: black;
     top: 350px;
-    left: 850px;
+    left: 750px;
 }
 
 #level2Div {
     position:absolute;
     background-color: black;
     top: 350px;
-    left: 850px;
+    left: 750px;
 }
 
 #level3Div {
     position:absolute;
     background-color: black;
     top: 350px;
-    left: 850px;
+    left: 750px;
 }
 
 #youloseDiv {
@@ -48,7 +48,15 @@ img {
     background-color: black;
     color: white;
     top: 350px;
-    left: 850px;
+    left: 750px;
+}
+
+#youwinDiv {
+    position: absolute;
+    background-color: black;
+    color: white;
+    top: 350px;
+    left: 750px;
 }
 
 #canvas1 {
