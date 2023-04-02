@@ -23,12 +23,39 @@ img {
     font-size: 40px;
 }
 
+#startButtonDiv {
+    position:absolute;
+    background-color: black;
+}
+
+#level2Div {
+    position:absolute;
+    background-color: black;
+}
+
+#level3Div {
+    position:absolute;
+    background-color: black;
+}
+
+#youloseDiv {
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+
+#canvas1 {
+    border: solid;
+}
+
 #canvas2 {
     display: none;
+    border: solid;
 }
 
 #canvas3 {
     display: none;
+    border: solid;
 }
 
 #level2 {
@@ -38,3 +65,4 @@ img {
 #level3 {
     display:none;
 }
+

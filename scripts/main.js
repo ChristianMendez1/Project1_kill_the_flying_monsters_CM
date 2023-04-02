@@ -295,6 +295,8 @@ class Monster6 {
 }
 }
 
+//level 2======================
+
 class Monster7 {
     constructor(radius, color, velocity){
         this.x = 1920;
@@ -1189,14 +1191,14 @@ const score = []
 
 //buttons
 
-let monsterbutton = document.getElementById('startButton')
-monsterbutton.addEventListener("click", something)
+let level1Button = document.getElementById('startButton')
+level1Button.addEventListener("click", level1Func)
 
 let level2button = document.getElementById('level2')
-level2button.addEventListener("click", something1)
+level2button.addEventListener("click", level2Func)
 
 let level3button = document.getElementById('level3')
-level3button.addEventListener("click", something2)
+level3button.addEventListener("click", level3Func)
 
 //losing functions
 
@@ -1220,39 +1222,34 @@ function youlose3(){
 
 //game and level functions
 
-function something(){
+function level1Func(){
     animate()
-    monsterbutton.style.display = 'none'
+    level1Button.style.display = 'none'
 }
 
-function something1(){
+function level2Func(){
     level2()
 }
 
-function something2(){
+function level3Func(){
     level3()
 }
 
 function animate(){
-    ctx1.clearRect(0, 0, canvas1.width, canvas1.height)
     requestAnimationFrame(animate)
     background.draw(ctx1)
     enemies.forEach((Monster) => {
         Monster.draw(ctx1)
         Monster.update()
     })
-    ctx1.strokeStyle = "white";
     ctx1.font = "40px Arial";
     ctx1.fillText("Score: " + score.length, 10, 700)
-    // ctx.font = "150px Arial";
-    // ctx.fillText('YOU WIN!', 650, 400)
     if(score.length == 6){
         canvas1.style.display = 'none'
         canvas2.style.display = 'inline'
         level2button.style.display = 'inline'
-
     } else {
-    setTimeout(youlose1, 8000);
+        setTimeout(youlose1, 8000);
     }
 }
 
