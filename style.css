@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    background-image: url("images/background4.jpg");
+    background-repeat: repeat;
 }
 
 img {
@@ -19,28 +21,64 @@ img {
 }
 
 #startButton {
+    position: absolute;
     font-size: 40px;
+    top: 350px;
+    left: 820px;
+}
+
+#level2 {
+    position: absolute;
+    font-size: 40px;
+    display: none;
+    top: 350px;
+    left: 820px;
+}
+
+#level3 {
+    position: absolute;
+    font-size: 40px;
+    display: none;
+    top: 350px;
+    left: 820px;
 }
 
 #startButtonDiv {
+    background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    top: 350px;
-    left: 750px;
+    width: 1860px;
+    height: 850px;
+    border-radius: 50px;
+    border-width: 20px;
+    color:white;
+    text-align: center;
 }
 
 #level2Div {
-    position:absolute;
+    background-image: url("images/wallpaper5.jpg");
+    position: absolute;
     background-color: black;
-    top: 350px;
-    left: 750px;
+    width: 1850px;
+    height: 850px;
+    border-radius: 50px;
+    border-width: 20px;
+    color:white;
+    text-align: center;
+    display: none;
 }
 
 #level3Div {
-    position:absolute;
+    background-image: url("images/wallpaper5.jpg");
+    position: absolute;
     background-color: black;
-    top: 350px;
-    left: 750px;
+    width: 1850px;
+    height: 850px;
+    border-radius: 50px;
+    border-width: 20px;
+    color:white;
+    text-align: center;
+    display: none;
 }
 
 #youloseDiv {
@@ -48,7 +86,8 @@ img {
     background-color: black;
     color: white;
     top: 350px;
-    left: 750px;
+    left: 900px;
+    font-size: 40px;
 }
 
 #youwinDiv {
@@ -56,21 +95,28 @@ img {
     background-color: black;
     color: white;
     top: 350px;
-    left: 750px;
+    left: 900px;
+    font-size: 40px;
 }
 
 #canvas1 {
     border: solid;
+    border-radius: 50px;
+    border-width: 20px;
 }
 
 #canvas2 {
     display: none;
     border: solid;
+    border-radius: 50px;
+    border-width: 20px;
 }
 
 #canvas3 {
     display: none;
     border: solid;
+    border-radius: 50px;
+    border-width: 20px;
 }
 
 #level2 {

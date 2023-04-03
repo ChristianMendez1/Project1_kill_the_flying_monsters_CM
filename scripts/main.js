@@ -1200,6 +1200,10 @@ level2button.addEventListener("click", level2Func)
 let level3button = document.getElementById('level3')
 level3button.addEventListener("click", level3Func)
 
+let startButtonDiv = document.getElementById('startButtonDiv')
+let level2Div = document.getElementById('level2Div')
+let level3Div = document.getElementById('level3Div')
+
 //losing functions
 
 function youlose1(){
@@ -1228,6 +1232,7 @@ function youwinDiv(){
 
 function level1Func(){
     animate()
+    startButtonDiv.style.display = 'none'
     level1Button.style.display = 'none'
 }
 
@@ -1252,12 +1257,15 @@ function animate(){
         canvas1.style.display = 'none'
         canvas2.style.display = 'inline'
         level2button.style.display = 'inline'
+        level2Div.style.display ='inline'
     } else {
         setTimeout(youlose1, 8000);
     }
 }
 
 function level2(){
+    level2button.style.display = 'none'
+    level2Div.style.display ='none'
     level2button.style.display = 'none'
     ctx2.clearRect(0, 0, canvas2.width, canvas2.height)
     requestAnimationFrame(level2)
@@ -1273,6 +1281,7 @@ function level2(){
         canvas3.style.display = 'inline'
         level2button.style.display = 'none'
         level3button.style.display = 'inline'
+        level3Div.style.display ='inline'
     } else {
     setTimeout(youlose2, 5000);
     }
@@ -1280,6 +1289,7 @@ function level2(){
 
 function level3(){
     level3button.style.display = 'none'
+    level3Div.style.display ='none'
     ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
     requestAnimationFrame(level3)
     background.draw(ctx3)
