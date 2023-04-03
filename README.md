@@ -23,7 +23,7 @@ Deployed through https://christianmendez1.github.io/Project1_kill_the_flying_mon
 
 # Approach taken
 
-All of the enemies are classes that use canvas to fly across the screen. They are put into arrays. The arrays are drawn onto the canvas. Eventlisteners use class methods to calculate the x and y coordiates of your clicks to make sure that you clicked the correct enemy. When you click the enemy it is spliced out of the array and a string is pushed into the score array. If you reach a certain score you go on to the next level. If you dont reach the score in time then timeout will run the lose function. The game generates levels through buttons that appear after you finish the level. After level 3 you win.
+All of the enemies are objects that use canvas to fly across the screen. A class method is used to increase the coordinates over time which causes them to move across the screen. I put every new class into an array depending on the level. When I press the start button the arrays are drawn onto the canvas. Eventlisteners use class methods to calculate the x and y coordiates of your clicks to make sure that you clicked the correct enemy. When you click the enemy it is spliced out of the array and a string is pushed into the score array. If you reach a certain score you go on to the next level. If you dont reach the score in time then timeout will run the lose function. The game generates levels through buttons that appear after you finish the level. After level 3 you win.
 
 # Code Example
 
