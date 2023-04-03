@@ -1251,8 +1251,9 @@ function animate(){
         Monster.draw(ctx1)
         Monster.update()
     })
+    ctx1.fillStyle = 'white';
     ctx1.font = "40px Arial";
-    ctx1.fillText("Score: " + score.length, 10, 700)
+    ctx1.fillText("Score: " + score.length, 10, 780)
     if(score.length == 6){
         canvas1.style.display = 'none'
         canvas2.style.display = 'inline'
@@ -1274,8 +1275,9 @@ function level2(){
         Monster.draw(ctx2)
         Monster.update()
     })
+    ctx2.fillStyle = 'white';
     ctx2.font = "40px Arial";
-    ctx2.fillText("Score: " + score.length, 10, 700)
+    ctx2.fillText("Score: " + score.length, 10, 780)
     if(score.length == 12){
         canvas2.style.display = 'none'
         canvas3.style.display = 'inline'
@@ -1293,8 +1295,9 @@ function level3(){
     ctx3.clearRect(0, 0, canvas3.width, canvas3.height)
     requestAnimationFrame(level3)
     background.draw(ctx3)
+    ctx3.fillStyle = 'white';
     ctx3.font = "40px Arial";
-    ctx3.fillText("Score: " + score.length, 10, 700)
+    ctx3.fillText("Score: " + score.length, 10, 780)
     enemies2.forEach((Monster) => {
         Monster.draw(ctx3)
         Monster.update()

@@ -1,7 +1,8 @@
 body {
     margin: 0;
-    background-image: url("images/background4.jpg");
+    background-color: gray;
     background-repeat: repeat;
+    font-family: sans-serif;
 }
 
 img {
