@@ -1161,12 +1161,12 @@ const enemy5 = new Monster5 (0, 360, 75, 'red', { x: 6, y: 0 })
 const enemy6 = new Monster6 (0, 420, 75, 'red', { x: 4, y: 0 })
 
 //level2 disagonal
-const enemy7 = new Monster7 (75, 'red', { x: -8, y: -3})
-const enemy8 = new Monster8 (75, 'red', { x: -9, y: -3 })
-const enemy9 = new Monster9 (75, 'red', { x: -8, y: -3 })
-const enemy10 = new Monster10 (75, 'red', { x: -11, y: -3 })
-const enemy11 = new Monster11 (75, 'red', { x: -11, y: -4 })
-const enemy12 = new Monster12 (75, 'red', { x: -10, y: -2 })
+const enemy7 = new Monster7 (100, 'red', { x: -8, y: -3})
+const enemy8 = new Monster8 (100, 'red', { x: -9, y: -3 })
+const enemy9 = new Monster9 (100, 'red', { x: -8, y: -3 })
+const enemy10 = new Monster10 (100, 'red', { x: -11, y: -3 })
+const enemy11 = new Monster11 (100, 'red', { x: -11, y: -4 })
+const enemy12 = new Monster12 (100, 'red', { x: -10, y: -2 })
 
 //level3 horizontal and diagonal
 const enemy13 = new Monster13 (0, 60, 75, 'red', { x: 5, y: 0 })
@@ -1175,12 +1175,12 @@ const enemy15 = new Monster15 (0, 180, 75, 'red', { x: 6, y: 0 })
 const enemy16 = new Monster16 (0, 240, 75, 'red', { x: 8, y: 0 })
 const enemy17 = new Monster17 (0, 360, 75, 'red', { x: 9, y: 0 })
 const enemy18 = new Monster18 (0, 420, 75, 'red', { x: 4, y: 0 })
-const enemy19 = new Monster19 (75, 'red', { x: -6, y: -3})
-const enemy20 = new Monster20 (75, 'red', { x: -7, y: -3 })
-const enemy21 = new Monster21 (75, 'red', { x: -6, y: -3 })
-const enemy22 = new Monster22 (75, 'red', { x: -9, y: -3 })
-const enemy23 = new Monster23 (75, 'red', { x: -9, y: -2 })
-const enemy24 = new Monster24 (75, 'red', { x: -8, y: -2 })
+const enemy19 = new Monster19 (100, 'red', { x: -6, y: -3})
+const enemy20 = new Monster20 (100, 'red', { x: -7, y: -3 })
+const enemy21 = new Monster21 (100, 'red', { x: -6, y: -3 })
+const enemy22 = new Monster22 (100, 'red', { x: -9, y: -3 })
+const enemy23 = new Monster23 (100, 'red', { x: -9, y: -2 })
+const enemy24 = new Monster24 (100, 'red', { x: -8, y: -2 })
 
 //arrays
 
