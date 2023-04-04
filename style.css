@@ -50,7 +50,7 @@ img {
     background-color: black;
     width: 500px;
     height: 600px;
-    border: solid;
+    border: outset;
     border-width: 10px;
     color:white;
     text-align: center;
@@ -64,7 +64,7 @@ img {
     background-color: black;
     width: 500px;
     height: 600px;
-    border: solid;
+    border: outset;
     border-width: 10px;
     color:white;
     text-align: center;
@@ -79,7 +79,7 @@ img {
     background-color: black;
     width: 500px;
     height: 600px;
-    border: solid;
+    border: outset;
     border-width: 10px;
     color:white;
     text-align: center;
@@ -94,7 +94,7 @@ img {
     background-color: black;
     width: 500px;
     height: 600px;
-    border: solid;
+    border: outset;
     border-width: 10px;
     color:white;
     text-align: center;
@@ -109,7 +109,7 @@ img {
     background-color: black;
     width: 500px;
     height: 600px;
-    border: solid;
+    border: outset;
     border-width: 10px;
     color:white;
     text-align: center;
@@ -150,14 +150,6 @@ img {
     border: solid;
     border-radius: 50px;
     border-width: 20px;
-}
-
-#level2 {
-    display: none;
-}
-
-#level3 {
-    display:none;
 }
 
 canvas {
