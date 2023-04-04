@@ -17,11 +17,42 @@ canvas2.height = 800
 canvas3.width = 1800
 canvas3.height = 800
 
+//sound 
+
+class Sounds {
+    win(){
+        winsound.play();
+    }
+    lose(){
+        losesound.play();
+    }
+    level(){
+        levelsound.play();
+    }
+}
+
 var audio = new Audio('music/background.mp3');
 var dead = new Audio('music/dead.wav');
+var winsound = new Audio('music/win.mp3');
+var losesound = new Audio('music/lose.mp3');
+var levelsound = new Audio('music/level.wav');
+
+var winsoundArray = [winsound]
+var losesoundArray = [losesound]
+
+var level1soundArray = [levelsound]
+var level2soundArray = [levelsound]
+
+var soundActivate = true;
+
+let sounds = new Sounds
 
 // audio.play();
 // dead.play();
+// winsound.play();
+// losesound.play();
+// levelsound.play();
+
 
 // monster classes
 class Monster1 {
@@ -1261,24 +1292,32 @@ let level3Div = document.getElementById('level3Div')
 function youlose1(){
     if(score.length !== 6 && score.length < 6){
         document.getElementById('youloseDiv').style.display = 'inline'
+        losesoundArray.forEach((Sounds) => {
+            losesound.play()
+            losesoundArray.splice(losesound, 1)
+        })
     }
 }
 
 function youlose2(){
     if(score.length !== 12 && score.length < 12){
         document.getElementById('youloseDiv').style.display = 'inline'
+        losesoundArray.forEach((Sounds) => {
+            losesound.play()
+            losesoundArray.splice(losesound, 1)
+        })
     }
 }
 
 function youlose3(){
     if(score.length !== 24 && score.length < 24){
         document.getElementById('youloseDiv').style.display = 'inline'
+        losesoundArray.forEach((Sounds) => {
+            losesound.play()
+            losesoundArray.splice(losesound, 1)
+        })
     }
 }
-
-function youwinDiv(){
-    document.getElementById('youwinDiv').style.display = 'inline'
-    }
 
 //game and level functions
 
@@ -1312,6 +1351,10 @@ function animate(){
         canvas2.style.display = 'inline'
         level2button.style.display = 'inline'
         level2Div.style.display ='inline'
+        level1soundArray.forEach((Sound) => {
+            levelsound.play()
+            level1soundArray.splice(levelsound, 1)
+        })
     } else {
         setTimeout(youlose1, 8000);
     }
@@ -1337,6 +1380,11 @@ function level2(){
         level2button.style.display = 'none'
         level3button.style.display = 'inline'
         level3Div.style.display ='inline'
+        level2soundArray.forEach((Sounds) => {
+            levelsound.load()
+            levelsound.play()
+            level2soundArray.splice(levelsound, 1)
+        })
     } else {
     setTimeout(youlose2, 5000);
     }
@@ -1356,7 +1404,11 @@ function level3(){
         Monster.update()
     })
     if (score.length == 24){
-        youwinDiv()
+        document.getElementById('youwinDiv').style.display = 'inline'
+        winsoundArray.forEach((Sound) => {
+            winsound.play()
+            winsoundArray.splice(winsound, 1)
+        })
     } else {
         setTimeout(youlose3, 8000);
     }
