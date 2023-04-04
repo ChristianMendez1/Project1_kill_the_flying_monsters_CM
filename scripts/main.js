@@ -17,6 +17,12 @@ canvas2.height = 800
 canvas3.width = 1800
 canvas3.height = 800
 
+var audio = new Audio('music/background.mp3');
+var dead = new Audio('music/dead.wav');
+
+// audio.play();
+// dead.play();
+
 // monster classes
 class Monster1 {
     constructor(x, y, radius, color, velocity){
@@ -55,6 +61,8 @@ class Monster1 {
         // if(enemies.find(enemy12))
         if (distance <= this.radius) {
             if(enemies.includes(enemy1) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy1), 1)
                 return true;
@@ -101,6 +109,8 @@ class Monster2 {
         )
         if (distance <= this.radius) {
             if(enemies.includes(enemy2) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy2), 1)
                 return true;
@@ -147,6 +157,8 @@ class Monster3 {
         )
         if (distance <= this.radius) {
             if(enemies.includes(enemy3) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy3), 1)
                 return true;
@@ -193,6 +205,8 @@ class Monster4 {
         )
         if (distance <= this.radius) {
             if(enemies.includes(enemy4) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy4), 1)
                 return true;
@@ -239,6 +253,8 @@ class Monster5 {
         )
         if (distance <= this.radius) {
             if(enemies.includes(enemy5) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy5), 1)
                 return true;
@@ -285,6 +301,8 @@ class Monster6 {
         )
         if (distance <= this.radius) {
             if(enemies.includes(enemy6) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies.splice(enemies.indexOf(enemy6), 1)
                 return true;
@@ -333,6 +351,8 @@ class Monster7 {
         )
         if (distance <= this.radius) {
             if(enemies1.includes(enemy7) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy7), 1)
                 return true;
@@ -379,6 +399,8 @@ class Monster8 {
         )
         if (distance <= this.radius) {
             if(enemies1.includes(enemy8) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy8), 1)
                 return true;
@@ -425,6 +447,8 @@ class Monster9 {
         )
         if (distance <= this.radius) {
             if(enemies1.includes(enemy9) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy9), 1)
                 return true;
@@ -471,6 +495,8 @@ class Monster10 {
         )
         if (distance <= this.radius) {
             if(enemies1.includes(enemy10) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy10), 1)
                 return true;
@@ -518,6 +544,8 @@ class Monster11 {
         )
         if (distance <= this.radius) {
             if(enemies1.includes(enemy11) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy11), 1)
                 return true;
@@ -565,6 +593,8 @@ class Monster12 {
         // if(enemies.includes(enemy12) = true)
         if (distance <= this.radius) {
             if(enemies1.includes(enemy12) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies1.splice(enemies1.indexOf(enemy12), 1)
                 return true;
@@ -613,6 +643,8 @@ class Monster13 {
         // if(enemies.find(enemy12))
         if (distance <= this.radius) {
             if(enemies2.includes(enemy13) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy13), 1)
                 return true;
@@ -659,6 +691,8 @@ class Monster14 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy14) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy14), 1)
                 return true;
@@ -705,6 +739,8 @@ class Monster15 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy15) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy15), 1)
                 return true;
@@ -751,6 +787,8 @@ class Monster16 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy16) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy16), 1)
                 return true;
@@ -797,6 +835,8 @@ class Monster17 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy17) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy17), 1)
                 return true;
@@ -843,6 +883,8 @@ class Monster18 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy18) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy18), 1)
                 return true;
@@ -889,6 +931,8 @@ class Monster19 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy19) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy19), 1)
                 return true;
@@ -935,6 +979,8 @@ class Monster20 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy20) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy20), 1)
                 return true;
@@ -981,6 +1027,8 @@ class Monster21 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy21) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy21), 1)
                 return true;
@@ -1074,6 +1122,8 @@ class Monster23 {
         )
         if (distance <= this.radius) {
             if(enemies2.includes(enemy23) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy23), 1)
                 return true;
@@ -1121,6 +1171,8 @@ class Monster24 {
         // if(enemies.includes(enemy12) = true)
         if (distance <= this.radius) {
             if(enemies2.includes(enemy24) == true){
+                dead.load()
+                dead.play()
                 score.push('score')
                 enemies2.splice(enemies2.indexOf(enemy24), 1)
                 return true;
@@ -1245,6 +1297,7 @@ function level3Func(){
 }
 
 function animate(){
+    audio.play()
     requestAnimationFrame(animate)
     background.draw(ctx1)
     enemies.forEach((Monster) => {
