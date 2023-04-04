@@ -24,48 +24,52 @@ img {
 #startButton {
     position: absolute;
     font-size: 40px;
-    top: 350px;
-    left: 820px;
+    top: 250px;
+    left: 28%;
 }
 
 #level2 {
     position: absolute;
     font-size: 40px;
     display: none;
-    top: 350px;
-    left: 820px;
+    top: 250px;
+    left: 35%;
 }
 
 #level3 {
     position: absolute;
     font-size: 40px;
     display: none;
-    top: 350px;
-    left: 820px;
+    top: 250px;
+    left: 35%;
 }
 
 #startButtonDiv {
     background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    width: 1860px;
-    height: 850px;
-    border-radius: 50px;
-    border-width: 20px;
+    width: 500px;
+    height: 600px;
+    border: solid;
+    border-width: 10px;
     color:white;
     text-align: center;
+    top: 110px;
+    left: 700px;
 }
 
 #level2Div {
     background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    width: 1850px;
-    height: 850px;
-    border-radius: 50px;
-    border-width: 20px;
+    width: 500px;
+    height: 600px;
+    border: solid;
+    border-width: 10px;
     color:white;
     text-align: center;
+    top: 110px;
+    left: 700px;
     display: none;
 }
 
@@ -73,31 +77,59 @@ img {
     background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    width: 1850px;
-    height: 850px;
-    border-radius: 50px;
-    border-width: 20px;
+    width: 500px;
+    height: 600px;
+    border: solid;
+    border-width: 10px;
     color:white;
     text-align: center;
+    top: 110px;
+    left: 700px;
     display: none;
 }
 
 #youloseDiv {
+    background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    color: white;
-    top: 350px;
-    left: 900px;
-    font-size: 40px;
+    width: 500px;
+    height: 600px;
+    border: solid;
+    border-width: 10px;
+    color:white;
+    text-align: center;
+    top: 110px;
+    left: 700px;
+    display: none;
 }
 
 #youwinDiv {
+    background-image: url("images/wallpaper5.jpg");
     position: absolute;
     background-color: black;
-    color: white;
-    top: 350px;
-    left: 900px;
+    width: 500px;
+    height: 600px;
+    border: solid;
+    border-width: 10px;
+    color:white;
+    text-align: center;
+    top: 110px;
+    left: 700px;
+    display: none;
+}
+
+#youloseP {
+    position: absolute;
     font-size: 40px;
+    top: 200px;
+    left: 35%;
+}
+
+#youwinP {
+    position: absolute;
+    font-size: 40px;
+    top: 200px;
+    left: 33%;
 }
 
 #canvas1 {
@@ -128,3 +160,6 @@ img {
     display:none;
 }
 
+canvas {
+    background-image: url("images/background3.jpg");
+}

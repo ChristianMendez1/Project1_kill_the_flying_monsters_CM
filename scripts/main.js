@@ -1260,24 +1260,24 @@ let level3Div = document.getElementById('level3Div')
 
 function youlose1(){
     if(score.length !== 6 && score.length < 6){
-        document.getElementById('youloseDiv').textContent = 'You lose!'
+        document.getElementById('youloseDiv').style.display = 'inline'
     }
 }
 
 function youlose2(){
     if(score.length !== 12 && score.length < 12){
-        document.getElementById('youloseDiv').textContent = 'You lose!'
+        document.getElementById('youloseDiv').style.display = 'inline'
     }
 }
 
 function youlose3(){
     if(score.length !== 24 && score.length < 24){
-        document.getElementById('youloseDiv').textContent = 'You lose!'
+        document.getElementById('youloseDiv').style.display = 'inline'
     }
 }
 
 function youwinDiv(){
-    document.getElementById('youwinDiv').textContent = 'You Win!'
+    document.getElementById('youwinDiv').style.display = 'inline'
     }
 
 //game and level functions
