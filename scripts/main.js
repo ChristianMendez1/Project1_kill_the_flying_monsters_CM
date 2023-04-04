@@ -43,8 +43,6 @@ var losesoundArray = [losesound]
 var level1soundArray = [levelsound]
 var level2soundArray = [levelsound]
 
-var soundActivate = true;
-
 let sounds = new Sounds
 
 // audio.play();
@@ -52,7 +50,6 @@ let sounds = new Sounds
 // winsound.play();
 // losesound.play();
 // levelsound.play();
-
 
 // monster classes
 class Monster1 {
