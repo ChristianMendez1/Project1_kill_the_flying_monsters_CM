@@ -19,18 +19,6 @@ canvas3.height = 800
 
 //sound 
 
-class Sounds {
-    win(){
-        winsound.play();
-    }
-    lose(){
-        losesound.play();
-    }
-    level(){
-        levelsound.play();
-    }
-}
-
 var audio = new Audio('music/background.mp3');
 var dead = new Audio('music/dead.wav');
 var winsound = new Audio('music/win.mp3');
@@ -42,14 +30,6 @@ var losesoundArray = [losesound]
 
 var level1soundArray = [levelsound]
 var level2soundArray = [levelsound]
-
-let sounds = new Sounds
-
-// audio.play();
-// dead.play();
-// winsound.play();
-// losesound.play();
-// levelsound.play();
 
 // monster classes
 class Monster1 {
@@ -1230,7 +1210,7 @@ class Background {
 
 const background = new Background(canvas1.width, canvas1.height);
 
-//new monster objects
+//new monster classes
 
 //level1 horizontal
 const enemy1 = new Monster1 (0, 60, 75, 'red', { x: 5, y: 0 })
@@ -1272,13 +1252,13 @@ const score = []
 //buttons
 
 let level1Button = document.getElementById('startButton')
-level1Button.addEventListener("click", level1Func)
+level1Button.addEventListener("click", level1)
 
 let level2button = document.getElementById('level2')
-level2button.addEventListener("click", level2Func)
+level2button.addEventListener("click", level2)
 
 let level3button = document.getElementById('level3')
-level3button.addEventListener("click", level3Func)
+level3button.addEventListener("click", level3)
 
 let startButtonDiv = document.getElementById('startButtonDiv')
 let level2Div = document.getElementById('level2Div')
@@ -1289,7 +1269,7 @@ let level3Div = document.getElementById('level3Div')
 function youlose1(){
     if(score.length !== 6 && score.length < 6){
         document.getElementById('youloseDiv').style.display = 'inline'
-        losesoundArray.forEach((Sounds) => {
+        losesoundArray.forEach(() => {
             losesound.play()
             losesoundArray.splice(losesound, 1)
         })
@@ -1299,7 +1279,7 @@ function youlose1(){
 function youlose2(){
     if(score.length !== 12 && score.length < 12){
         document.getElementById('youloseDiv').style.display = 'inline'
-        losesoundArray.forEach((Sounds) => {
+        losesoundArray.forEach(() => {
             losesound.play()
             losesoundArray.splice(losesound, 1)
         })
@@ -1309,7 +1289,7 @@ function youlose2(){
 function youlose3(){
     if(score.length !== 24 && score.length < 24){
         document.getElementById('youloseDiv').style.display = 'inline'
-        losesoundArray.forEach((Sounds) => {
+        losesoundArray.forEach(() => {
             losesound.play()
             losesoundArray.splice(losesound, 1)
         })
@@ -1318,23 +1298,11 @@ function youlose3(){
 
 //game and level functions
 
-function level1Func(){
-    animate()
+function level1(){
+    audio.play()
     startButtonDiv.style.display = 'none'
     level1Button.style.display = 'none'
-}
-
-function level2Func(){
-    level2()
-}
-
-function level3Func(){
-    level3()
-}
-
-function animate(){
-    audio.play()
-    requestAnimationFrame(animate)
+    requestAnimationFrame(level1)
     background.draw(ctx1)
     enemies.forEach((Monster) => {
         Monster.draw(ctx1)
