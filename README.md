@@ -1,5 +1,5 @@
 # Project1_kill_the_flying_monsters_CM
-Click based javascript canvas game. Click to kill the monsters and win.
+Click based HTML canvas game. Click to kill the monsters and win.
 
 # Motivation
 
@@ -15,7 +15,7 @@ Javascript, HTML, and CSS
 
 # Features
 
-Uses javascript's canvas to make a click based game. Uses the pythagorean theorem to calculate clicks and make sure you clicked the correct monster. You have to click all of the monsters before they leave the screen. If you don't you lose. If you do you go on to the next level. If you pass level 3 you win.
+Uses HTML's canvas to make a click based game. Uses the pythagorean theorem to calculate clicks and make sure you clicked the correct monster. You have to click all of the monsters before they leave the screen. If you don't you lose. If you do you go on to the next level. If you pass level 3 you win.
 
 # How to use
 
