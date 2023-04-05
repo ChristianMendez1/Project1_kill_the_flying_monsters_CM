@@ -20,6 +20,7 @@ Uses javascript's canvas to make a click based game. Uses the pythagorean theore
 # How to use
 
 Deployed through https://christianmendez1.github.io/Project1_kill_the_flying_monsters_CM/
+On macbooks or displays with zoomed in resolutions make sure to zoom out to see the entire game if needed.
 
 # Approach taken
 
